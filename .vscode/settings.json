@@ -1,0 +1,15 @@
+{
+	"prettier.bracketSameLine": true,
+	"prettier.useTabs": true,
+	"prettier.singleQuote": true,
+	"prettier.singleAttributePerLine": true,
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnPaste": true,
+	"less.format.braceStyle": "expand",
+	"html.format.indentInnerHtml": true,
+	"js/ts.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+	"js/ts.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+	"js/ts.format.insertSpaceBeforeFunctionParenthesis": true,
+	"js/ts.format.semicolons": "insert"
+}

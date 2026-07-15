@@ -1,0 +1,181 @@
+BODY
+│
+├──header
+└── container
+    └── header-wrapper   ← Parent container
+        ├── logo
+        ├── navbar
+        └── donate button
+│
+├── HERO
+│   ├── Overlay
+│   ├── Heading
+│   ├── Paragraph
+│   ├── Buttons
+│   └── Statistics / Icon Cards
+│
+├── WHAT WE DO
+│   ├── Left Image
+│   ├── Right Content
+│   └── Impact Counter (15+ Years)
+│
+  MISSION & VISION
+│   ├── Small Label
+│   ├── Heading
+│   └── Description
+│
+├── History & Values
+│
+├── Section Heading
+├── Navigation Tabs
+├── History Content
+│   ├── Image
+│   └── Description
+│       ├── ORIGIN
+│       ├── Where Hope Began
+│       ├── Paragraph
+│       ├── Paragraph
+│       ├── Paragraph
+│       └── Explore Our Story Button
+│
+└── History CTA
+    ├── Join Us in Making a Difference
+    └── Donate Now Button
+│
+├── CTA 1
+│   ├── Heading
+│   ├── Description
+│   └── Donate Button
+│
+├── HOW WE HELP
+│   ├── Section Heading
+│   └── Category Slider
+│        ├── Hunger Relief
+│        ├── Housing Projects
+│        ├── Senior Wellness
+│        ├── Scholarships
+│        └── Outreach Activities
+│
+├── EMPOWERING LIVES
+│   ├── Section Heading
+│   ├── Large Card 1
+│   ├── Large Card 2
+│   ├── Large Card 3
+│   └── Large Card 4
+│
+├── CTA 2 (Purple Background)
+│   ├── Heading
+│   ├── Description
+│   ├── Donate Button
+│   └── Volunteer Button
+│
+├── WELLNESS SPOTLIGHT
+│   ├── Heading
+│   ├── Large Image 1
+│   ├── Large Image 2
+│   └── Large Image 3
+│
+├── REAL VOICE, REAL IMPACT
+│   ├── Section Heading
+│   ├── Featured Story Banner
+│   ├── Story Text
+│   ├── Left Arrow
+│   ├── Right Arrow
+│   └── Category Avatars
+│        ├── Volunteer
+│        ├── Partner
+│        ├── Family
+│        └── Donor
+│
+├── UPCOMING STORIES
+│   ├── Section Heading
+│   └── Story Cards
+│        ├── Card 1
+│        ├── Card 2
+│        ├── Card 3
+│        ├── Card 4
+│        └── Card 5
+│
+├── LATEST FROM OUR COMMUNITY
+│   ├── Section Heading
+│   ├── Blog Card
+│   ├── Event Card
+│   └── Award Card
+│
+├── JOIN COMMUNITY
+│   ├── Heading
+│   ├── Description
+│   ├── Get Involved Button
+│   └── View Gallery Button
+│
+└── FOOTER
+    ├── Logo
+    ├── Description
+    ├── Social Icons
+    ├── Quick Links
+    ├── Newsletter Heading
+    ├── Newsletter Description
+    ├── Name Input
+    ├── Email Input
+    └── Submit Button
+
+    SPACING PLAN;
+
+
+    | Element                   | Spacing |
+| ------------------------- | ------: |
+| Section Top & Bottom      |   100px |
+| Section Heading → Content |    60px |
+| Heading → Paragraph       |    20px |
+| Paragraph → Button        |    30px |
+| Between Cards             |    24px |
+| Between Images            |    20px |
+| Between Two Columns       |    60px |
+| Footer Padding            |    80px |
+
+
+REUSABLE COMPONENTS
+
+.container
+
+.section
+
+.section-heading
+
+.section-title
+
+.section-subtitle
+
+.section-description
+
+.primary-btn
+
+.secondary-btn
+
+.card
+
+.card-image
+
+.card-body
+
+.grid-2
+
+.grid-3
+
+.grid-4
+
+.grid-5
+
+.flex-center
+
+.flex-between
+
+
+font-family: Plus Jakarta Sans;
+font-weight: 400;
+font-style: Regular;
+font-size: 20px;
+leading-trim: NONE;
+line-height: 32px;
+letter-spacing: 0px;
+vertical-align: middle;
