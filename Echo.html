@@ -110,11 +110,11 @@
 
             .section-tag {
                 display: inline-block;
-                border: 1px solid #6A3DF0;
+                border: 1px solid #F4EDFF;
                 border-radius: 30px;
                 font-size: 14px;
                 font-weight: 600;
-                color: #6A3DF0;
+                color: #8239B9;
                 background-color: #F4EDFF;
                 width: fit-content;
                 text-transform: uppercase;
@@ -150,8 +150,10 @@
                 position: relative;
                 min-height: 100vh;
 
-                background: url("../images/hero bg img.png") center center / cover no-repeat;
-
+                background: url("../images/hero bg img.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 92% center;
                 display: flex;
                 align-items: center;
             }
@@ -159,12 +161,24 @@
             .hero-overlay {
                 position: absolute;
                 inset: 0;
-                background: linear-gradient(to right,
-                        rgba(49, 16, 95, 0.82) 0%,
-                        rgba(65, 24, 120, 0.68) 30%,
-                        rgba(83, 38, 145, 0.42) 55%,
-                        rgba(83, 38, 145, 0.18) 75%,
-                        rgba(83, 38, 145, 0.05) 100%);
+                z-index: 1;
+                pointer-events: none;
+
+                background:
+                    linear-gradient(180deg,
+                        rgba(107, 46, 154, .95) 0%,
+                        rgba(107, 46, 154, .75) 18%,
+                        transparent 32%),
+
+                    /* Left */
+                    linear-gradient(90deg,
+                        rgba(107, 46, 154, .98) 0%,
+                        rgba(107, 46, 154, .95) 8%,
+                        rgba(107, 46, 154, .85) 16%,
+                        rgba(107, 46, 154, .55) 24%,
+                        rgba(107, 46, 154, .18) 28%,
+                        transparent 30%);
+
             }
 
             .hero-content {
@@ -190,19 +204,20 @@
                 color: #fff;
 
                 margin-bottom: 12px;
+                margin-top: 60px;
             }
 
             /* Paragraph */
 
+            .hero-text {
+                max-width: 560px;
+            }
+
             .hero-text p {
-
                 font-size: 18px;
-
                 line-height: 1.7;
-
                 color: #fff;
-
-                padding: 0px 300px 0px 0px;
+                padding-right: 180px;
             }
 
 
@@ -213,6 +228,8 @@
                 align-items: center;
 
                 gap: 14px;
+
+                margin-top: 20px;
 
                 margin-bottom: 60px;
             }
@@ -228,7 +245,7 @@
 
             .hero-divider img {
 
-                width: 20px;
+                width: 30px;
             }
 
             /* Buttons */
@@ -284,17 +301,40 @@
             }
 
             .what-we-do {
-                width: 100%;
-                background-image: url("../images/what we do bg img.png");
-                background-repeat: no-repeat;
-                background-position: left center;
-                background-size: contain;
                 position: relative;
                 overflow: hidden;
                 background-color: #fff;
+                z-index: 1;
+            }
+
+            .what-image {
+                position: relative;
+                flex: 0 0 48%;
+                z-index: 2;
+            }
+
+            .what-we-do::before {
+                content: "";
+                position: absolute;
+
+                width: 420px;
+                height: 380px;
+
+                left: 0px;
+                bottom: 2px;
+
+                background: url("../images/what we do bg img1.png") no-repeat;
+                background-size: contain;
+                background-position: left bottom;
+
+
+                z-index: 0;
             }
 
             .what-we-do-inner {
+                position: relative;
+                z-index: 1;
+
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -320,7 +360,7 @@
             .content-divider {
                 width: 80px;
                 height: 2px;
-                background: #6A3DF0;
+                background: #8239B9;
             }
 
             .what-description {
@@ -335,22 +375,23 @@
             }
 
             .highlight {
-                color: #6A3DF0;
+                color: #8239B9;
                 font-weight: 600;
                 letter-spacing: 1px;
             }
 
-            .mission-title {
+
+            .section2-right .mission-title {
                 font-size: 14px;
                 font-weight: 600;
-                color: #6A3DF0;
+                color: #8239B9;
                 text-transform: uppercase;
                 margin-bottom: 12px;
 
             }
 
-            .mission-description {
-                font-size: 12px;
+            .section2-right .mission-description {
+                font-size: 16px;
                 line-height: 1.8;
                 color: #555;
                 margin-top: 12px;
@@ -366,6 +407,7 @@
                 font-size: 16px;
                 line-height: 1.8;
                 color: #555;
+
             }
 
             .impact-card {
@@ -374,7 +416,7 @@
                 bottom: -60px;
                 width: 180px;
                 padding: 8px;
-                background: #6A3DF0;
+                background: #8239B9;
                 color: #fff;
                 border-radius: 8px;
                 text-align: center;
@@ -486,7 +528,7 @@
 
                 height: 4px;
 
-                background: #6A3DF0;
+                background: #8239B9;
             }
 
             /* history content */
@@ -527,7 +569,7 @@
             .history-subtitle {
                 font-size: 14px;
                 font-weight: 600;
-                color: #6A3DF0;
+                color: #8239B9;
                 text-transform: uppercase;
                 margin-bottom: 12px;
             }
@@ -575,9 +617,9 @@
                 align-items: center;
 
                 padding: 10px 20px;
-                border: 1px solid #6A3DF0;
+                border: 1px solid #8239B9;
                 border-radius: 50px;
-                background: #6A3DF0;
+                background: #8239B9;
                 color: #fff;
             }
 
@@ -671,7 +713,7 @@
                 justify-content: center;
                 align-items: center;
 
-                /* background:#6A3DF0;*/
+                /* background:#8239B9;*/
                 border-radius: 50%;
             }
 
@@ -853,7 +895,7 @@
 
             .walk-actions .btn-primary {
                 background: #fff;
-                color: #7A3EF2;
+                color: #8239B9;
                 border: 1px solid #fff;
             }
 
@@ -872,7 +914,7 @@
 
             .btn-outline-light:hover {
                 background: #fff;
-                color: #7A3EF2;
+                color: #8239B9;
             }
 
             /* wellness */
@@ -880,7 +922,35 @@
             .wellness {
                 padding: 100px 0;
                 background: #fff;
+                position: relative;
+
+                background: #fff;
+
             }
+
+            .wellness::before {
+                content: "";
+                position: absolute;
+
+                width: 700px;
+                height: 700px;
+
+                left: 52%;
+                top: 90px;
+
+                transform: translateX(-50%);
+
+                background: url("../images/wellness bg img.png") no-repeat center;
+                background-size: contain;
+
+                z-index: 0;
+            }
+
+            .wellness .container {
+                position: relative;
+                z-index: 1;
+            }
+
 
             .wellness-header {
                 text-align: center;
@@ -908,6 +978,47 @@
             .stories {
                 padding: 100px 0;
                 background: #ffffff;
+                position: relative;
+            }
+
+            .stories::before {
+                content: "";
+                position: absolute;
+
+                width: 180px;
+                height: 180px;
+
+                top: 180px;
+                right: 50px;
+
+                background: url("/images/stories bg img.png") no-repeat;
+                background-size: contain;
+                background-position: top right;
+
+                z-index: 0;
+            }
+
+
+            .stories::after {
+                content: "";
+                position: absolute;
+
+                width: 180px;
+                height: 180px;
+
+                left: 40px;
+                bottom: 300px;
+
+                background: url("/images/stories bg img.png") no-repeat;
+                background-size: contain;
+                background-position: bottom left;
+
+                z-index: 0;
+            }
+
+            .stories .container {
+                position: relative;
+                z-index: 1;
             }
 
             .stories-header {
@@ -1124,21 +1235,22 @@
                 position: relative;
                 background: #ffffff;
                 overflow: hidden;
+                z-index: 1;
             }
 
             .moments::after {
                 content: "";
                 position: absolute;
-                top: 0;
-                right: 0;
-                width: 380px;
-                height: 320px;
-                background: url("../images/momentss bg img.png") no-repeat top right;
+                top: 80px;
+                right: 80px;
+                width: 900px;
+                height: 800px;
+                background: url("../images/moments bg img.png") no-repeat top right;
                 background-size: contain;
                 z-index: 0;
             }
 
-            .moments.container {
+            .moments .container {
                 position: relative;
                 z-index: 1;
 
@@ -1245,7 +1357,7 @@
                 font-size: 16px;
                 font-weight: 600;
 
-                color: #6A3DF0;
+                color: #8239B9;
 
                 margin-top: auto;
             }
@@ -1343,23 +1455,23 @@
                 flex-shrink: 0;
             }
 
-            /* Reuse your existing button classes */
+
 
             .community-actions .btn-primary {
                 color: #ffffff;
-                background: #6A3DF0;
-                border: 1px solid #6A3DF0;
+                background: #8239B9;
+                border: 1px solid #8239B9;
             }
 
             .community-actions .btn-outline-light {
                 background: transparent;
-                color: #6A3DF0;
-                border: 1px solid #6A3DF0;
+                color: #8239B9;
+                border: 1px solid #8239B9;
             }
 
             .community-actions .btn-outline-light:hover {
                 background: #ffffff;
-                color: #6A3DF0;
+                color: #8239B9;
             }
 
             /* FOOTER */
@@ -1673,7 +1785,7 @@
 
                             <div class="hero-text">
 
-                                <h1>Empowering Lives Through <br> Compassion</h1>
+                                <h1>Empowering <br>Lives Through <br> Compassion</h1>
 
                                 <p>
                                     Together we bring hope, dignity, and opportunities to
