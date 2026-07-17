@@ -1828,9 +1828,24 @@
                     min-height: 100vh;
                     background-size: cover;
                     background-repeat: no-repeat;
-                    background-position: center;
+                    background-position: 60% center;
 
 
+                }
+
+                .hero-overlay {
+                    background:
+                        linear-gradient(180deg,
+                            rgba(107, 46, 154, .55) 0%,
+                            rgba(107, 46, 154, .35) 18%,
+                            transparent 38%),
+
+                        linear-gradient(90deg,
+                            rgba(107, 46, 154, .70) 0%,
+                            rgba(107, 46, 154, .55) 10%,
+                            rgba(107, 46, 154, .35) 20%,
+                            rgba(107, 46, 154, .15) 28%,
+                            transparent 40%);
                 }
 
                 .hero-text h1 {
@@ -1848,14 +1863,17 @@
                 }
 
                 .hero-actions {
+
+                    display: flex;
                     flex-direction: column;
-                    align-items: stretch;
+                    align-items: center;
+                    gap: 16px;
                     margin-bottom: 40px;
 
                 }
 
                 .hero-actions a {
-                    width: 100%;
+                    width: 210px;
                     text-align: center;
 
                 }
@@ -1898,6 +1916,15 @@
                     overflow-x: auto;
                     justify-content: flex-start;
                     margin-bottom: 30px;
+                }
+
+                .cta-heading img {
+                    width: 28px;
+                    height: 30px;
+                }
+
+                .cta-heading h2 {
+                    font-size: 16;
                 }
 
                 .tab-btn {
@@ -2063,6 +2090,7 @@
                     min-width: 180px;
                     width: 180px;
                     height: 100px;
+                    margin-bottom: 40px;
                 }
 
 
@@ -2093,12 +2121,17 @@
                 }
 
                 .community-actions {
+                    /* flex-direction: column;
+                    width: 100%;*/
+                    display: flex;
                     flex-direction: column;
-                    width: 100%;
+                    align-items: center;
+                    gap: 16px;
+                    margin-bottom: 40px;
                 }
 
                 .community-actions a {
-                    width: 100%;
+                    width: 180px;
                     justify-content: center;
                 }
 
