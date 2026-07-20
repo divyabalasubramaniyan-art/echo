@@ -24,8 +24,6 @@
                 max-width: 100%;
             }
 
-
-
             a {
                 text-decoration: none;
             }
@@ -835,7 +833,7 @@
             }
 
             .empowering-card:nth-child(2) .card-image img {
-                object-position: center;
+                object-position: right;
             }
 
             .card-content {
@@ -1823,14 +1821,27 @@
                     width: 100%;
                 }
 
+                .hero-content,
+                .hero-left,
+                .hero-text {
+                    width: 100%;
+                    max-width: 100%;
+                }
+
                 .hero {
+                    width: 100%;
+                    overflow: hidden;
+                }
+
+                .hero {
+
                     padding: 120px 0 60px;
                     background-image: url("images/hero bg img mobile.png");
 
                     min-height: 100vh;
                     background-size: cover;
                     background-repeat: no-repeat;
-                    background-position: 60% center;
+                    background-position: center center;
 
 
                 }
@@ -1849,6 +1860,7 @@
                             rgba(107, 46, 154, .15) 28%,
                             transparent 40%);
                 }
+
 
                 .hero-text h1 {
                     font-size: 40px;
@@ -1885,6 +1897,9 @@
 
                 }
 
+                .hero-features {
+                    width: 100%;
+                }
 
                 .hero-features img {
                     width: 100%;
@@ -1921,7 +1936,7 @@
 
                 .history-tabs {
                     overflow-x: auto;
-                    justify-content: flex-start;
+                    justify-content: center;
                     margin-bottom: 30px;
                 }
 
@@ -2216,6 +2231,9 @@
             }
 
 
+
+
+
             @media (min-width: 781px) and (max-width: 900px) {
 
                 .header-inner {
@@ -2355,8 +2373,12 @@
                 }
 
                 .hero {
-                    min-height: 850px;
-                    background-position: 68% center;
+                    background-image: url('images/hero\ bg\ img.png');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                    min-height: 100vh;
+
 
                 }
 
