@@ -86,6 +86,7 @@
                 display: flex;
                 align-items: center;
                 gap: 16px;
+                margin-right: 40px;
             }
 
             .btn-primary {
@@ -1777,6 +1778,7 @@
 
                 .hamburger {
                     display: block;
+                    margin-right: 40px;
                 }
 
                 .navbar {
@@ -1989,7 +1991,7 @@
                 .empowering-card:nth-child(4) {
                     grid-column: auto;
                     grid-row: auto;
-                    height: 300px;
+                    height: 260px;
                 }
 
                 .walk-cta-box {
@@ -2000,12 +2002,50 @@
                     font-size: 28px;
                 }
 
-                .wellness::before,
-                .what-we-do::before,
-                .stories::before,
-                .stories::after,
+                .what-we-do::before {
+                    display: block;
+                    width: 180px;
+                    height: 180px;
+                    left: -40px;
+                    top: 300px;
+                    background-size: contain;
+                }
+
+                .wellness::before {
+                    display: block;
+                    width: 260px;
+                    height: 260px;
+                    top: 120px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-size: contain;
+                }
+
+                .stories::before {
+                    display: block;
+                    width: 100px;
+                    height: 100px;
+                    top: 200px;
+                    right: -20px;
+                    background-size: contain;
+                }
+
+                .stories::after {
+                    display: block;
+                    width: 100px;
+                    height: 100px;
+                    left: -20px;
+                    bottom: 300px;
+                    background-size: contain;
+                }
+
                 .moments::after {
-                    display: none;
+                    display: block;
+                    width: 250px;
+                    height: 300px;
+                    top: 40px;
+                    right: -40px;
+                    background-size: contain;
                 }
 
                 .wellness-grid,
@@ -2175,6 +2215,112 @@
                 }
             }
 
+
+            @media (min-width: 781px) and (max-width: 900px) {
+
+                .header-inner {
+                    padding: 14px 0;
+                }
+
+
+                .header-action .btn-primary {
+                    display: none;
+                }
+
+                .hamburger {
+                    display: block;
+                    margin-right: 40px;
+                }
+
+                .navbar {
+                    display: block;
+                    position: fixed;
+                    top: 76px;
+                    right: -260px;
+                    width: 260px;
+                    height: auto;
+                    background: #8239B9;
+                    transition: right .3s ease;
+                    padding: 25px 20px;
+                    z-index: 999;
+
+                    visibility: hidden;
+                    opacity: 0;
+
+
+                }
+
+                .navbar.active {
+                    right: 0;
+                    visibility: visible;
+                    opacity: 1;
+
+                }
+
+                .nav-list {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 20px;
+                }
+
+                .nav-list li {
+                    width: 100%;
+                }
+
+                .nav-list a {
+                    color: #fff;
+                    display: block;
+                    width: 100%;
+                }
+
+                .featured-image {
+                    height: 600px;
+                }
+
+                .stories::before {
+                    right: -30px;
+                }
+
+                .stories::after {
+                    left: -30px;
+                    bottom: 350px;
+                }
+
+                .featured-overlay {
+                    left: 35px;
+                    top: 20px;
+                    width: 220px;
+                    padding: 20px;
+                }
+
+                .featured-overlay h3 {
+                    font-size: 18px;
+                }
+
+                .featured-overlay p {
+                    font-size: 14px;
+                    line-height: 1.5;
+                }
+
+
+                .story-arrow {
+                    top: 50%;
+                    transform: translateY(-70%);
+                }
+
+                .story-prev {
+                    left: -35px;
+
+                }
+
+                .story-next {
+                    right: -35px;
+                }
+
+            }
+
+
             @media (min-width: 781px) and (max-width: 1024px) {
 
                 section {
@@ -2211,6 +2357,7 @@
                 .hero {
                     min-height: 850px;
                     background-position: 68% center;
+
                 }
 
                 .hero-content {
@@ -2220,11 +2367,13 @@
                 .hero-text h1 {
                     font-size: 46px;
                     margin-top: 70px;
+
                 }
 
                 .hero-text p {
                     font-size: 17px;
-                    padding-right: 80px;
+                    padding-right: 180px;
+                    max-width: 520px;
                 }
 
                 .hero-features img {
@@ -2283,11 +2432,17 @@
 
                 .slide-card {
                     min-width: 320px;
-                    margin-bottom: 20px;
+
                 }
 
                 .slide-image {
                     margin-bottom: 20px;
+                }
+
+                .slide-title {
+                    min-height: 60px;
+                    display: flex;
+                    align-items: flex-start;
                 }
 
                 .empowering-cards {
@@ -2302,7 +2457,46 @@
                 .empowering-card:nth-child(4) {
                     grid-column: auto;
                     grid-row: auto;
-                    height: 320px;
+                    height: 480px;
+                }
+
+
+
+                /*  .empowering-card:nth-child(2) {
+                    grid-column: 1 / -1;
+                }*/
+
+                /*  .empowering-cards {
+                    grid-template-columns: 1.2fr 1fr 1fr;
+                    grid-template-rows: 300px 300px;
+                    gap: 20px;
+                }
+
+                .empowering-card:nth-child(1) {
+                    grid-column: 1;
+                    grid-row: 1 / span 2;
+                }
+
+                .empowering-card:nth-child(2) {
+                    grid-column: 2 / span 2;
+                    grid-row: 1;
+                }
+
+                .empowering-card:nth-child(3) {
+                    grid-column: 2;
+                    grid-row: 2;
+                }
+
+                .empowering-card:nth-child(4) {
+                    grid-column: 3;
+                    grid-row: 2;
+                }
+*/
+                .card-image img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+
                 }
 
                 .wellness-grid {
@@ -2318,22 +2512,22 @@
                 }
 
                 .featured-overlay {
-                    left: 60px;
+                    left: 65px;
                     top: 40px;
                     max-width: 300px;
                     padding: 30px 30px;
                 }
 
-                .slide-arrow {
-                    top: -50px;
+                .story-arrow {
+                    top: 35%;
                 }
 
                 .story-prev {
-                    left: -45px;
+                    left: -55px;
                 }
 
                 .story-next {
-                    right: -45px;
+                    right: -55px;
                 }
 
                 .story-item {
@@ -2341,12 +2535,11 @@
                     height: 120px;
                 }
 
-                .upcoming-image {
-                    object-fit: cover;
-                    object-position: left top;
+                .upcoming-img {
                     width: 100%;
-                    height: 180px;
-                    display: block;
+                    height: 280px;
+                    object-fit: cover;
+                    object-position: 50% 10%;
                 }
 
                 .upcoming-grid {
@@ -2374,15 +2567,36 @@
                 }
 
                 .footer-content {
+                    display: grid;
                     grid-template-columns: 1fr 1fr;
                     gap: 40px;
+                    justify-items: center;
+                    align-items: start;
+                }
+
+                .footer-about,
+
+                .footer-newsletter {
+                    text-align: center;
+                }
+
+                .footer-links {
+                    margin-top: 10px;
+                    text-align: left;
+                }
+
+                .footer-social {
+                    justify-content: center;
                 }
 
                 .footer-newsletter {
                     grid-column: 1 / -1;
                 }
 
-
+                .newsletter-email {
+                    width: 100%;
+                    max-width: 350px;
+                }
             }
         </style>
     </head>
