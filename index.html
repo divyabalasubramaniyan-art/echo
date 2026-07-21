@@ -13,10 +13,15 @@
                 box-sizing: border-box;
             }
 
+            html {
+                overflow-x: hidden;
+            }
+
             body {
                 font-family: 'Poppins', sans-serif;
                 color: #1B1B1B;
                 background: #fff;
+                overflow-x: hidden;
             }
 
             img {
@@ -152,9 +157,9 @@
                 background: url("images/hero bg img.png");
                 background-repeat: no-repeat;
                 background-size: cover;
-                background-position: 92% center;
+                background-position: center center;
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
             }
 
             .hero-overlay {
@@ -202,8 +207,8 @@
 
                 color: #fff;
 
-                margin-bottom: 12px;
-                margin-top: 100px;
+                margin-bottom: 60px;
+                margin-top: 20px;
             }
 
             /* Paragraph */
@@ -836,6 +841,11 @@
                 object-position: right;
             }
 
+            .empowering-card:nth-child(3) .card-image img {
+                object-position: center top;
+            }
+
+
             .card-content {
                 position: absolute;
                 left: 24px;
@@ -988,7 +998,7 @@
                 height: 180px;
 
                 top: 180px;
-                right: 50px;
+                right: 0px;
 
                 background: url("images/stories bg img.png") no-repeat;
                 background-size: contain;
@@ -1005,8 +1015,8 @@
                 width: 180px;
                 height: 180px;
 
-                left: 40px;
-                bottom: 300px;
+                left: 0px;
+                bottom: 370px;
 
                 background: url("images/stories bg img.png") no-repeat;
                 background-size: contain;
@@ -1031,33 +1041,42 @@
             .featured-image {
                 position: relative;
                 border-radius: 24px;
-                height: 600px;
+                overflow: hidden;
+                aspect-ratio: 16/9;
+                width: 100%;
             }
 
             .featured-img {
                 width: 100%;
                 height: 100%;
-                display: block;
                 object-fit: cover;
                 border-radius: 24px;
             }
 
             .featured-overlay {
                 position: absolute;
-                left: 100px;
-                top: 100px;
-                z-index: 2;
-                max-width: 400px;
-                padding: 80px 20px 80px 40px;
+                top: 30%;
+                left: 95px;
+                transform: translateY(-50%);
 
-                border: 1px solid rgba(255, 255, 255, 0.3);
+                width: 360px;
+                min-height: 300px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                padding: 36px 32px;
+
                 border-radius: 20px;
+                border: 1px solid rgba(255, 255, 255, .3);
+                background: rgba(255, 255, 255, .12);
+                backdrop-filter: blur(12px);
 
-                background: rgba(255, 255, 255, 0.08);
-
-                backdrop-filter: blur(10px);
-
+                z-index: 2;
             }
+
+
 
             .featured-tag {
                 display: inline-block;
@@ -1078,30 +1097,37 @@
                 color: #ffffff;
             }
 
+            .featured-story {
+                position: relative;
+            }
+
             .story-arrow {
                 position: absolute;
-
-                top: 40%;
-
+                top: 35%;
                 transform: translateY(-50%);
 
+                width: 56px;
+                height: 56px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
                 border: none;
-
-                background: transparent;
-
-                padding: 0;
-
+                border-radius: 50%;
+                background: #fff;
                 cursor: pointer;
 
+                box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
                 z-index: 5;
             }
 
             .story-prev {
-                left: -50px;
+                left: -20px;
             }
 
             .story-next {
-                right: -50px;
+                right: -20px;
             }
 
             /* Story List */
@@ -1868,7 +1894,7 @@
                 }
 
                 .hero-text p {
-                    padding-right: 0;
+                    padding-right: 180px;
                     font-size: 16px;
                 }
 
@@ -1898,7 +1924,7 @@
                 }
 
                 .hero-features {
-                    width: 100%;
+                    width: 280px;
                 }
 
                 .hero-features img {
@@ -1915,11 +1941,19 @@
                 }
 
                 .what-content,
-                .what-image,
+
                 .history-image,
                 .tab-content {
                     flex: 100%;
                     width: 100%;
+                }
+
+
+
+                .what-image img {
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: 60% center;
                 }
 
                 .impact-card {
@@ -2069,6 +2103,17 @@
                     grid-template-columns: 1fr;
                 }
 
+                .moments-img {
+                    object-position: 50% 10%;
+                }
+
+                .upcoming-img {
+                    width: 100%;
+                    height: 350px;
+                    object-fit: cover;
+                    object-position: center center;
+                }
+
                 .wellness-card img {
                     height: 280px;
                 }
@@ -2089,10 +2134,11 @@
                 .featured-overlay {
                     position: absolute;
 
-                    left: 20px;
+                    left: 60px;
 
-                    top: 40px;
-                    width: 150px;
+                    top: 40%;
+                    width: 35%;
+                    min-height: auto;
 
                     padding: 18px;
 
@@ -2114,13 +2160,13 @@
                 }*/
 
                 .featured-tag {
-                    font-size: 11px;
+                    font-size: 12px;
                     margin-bottom: 12px;
 
                 }
 
                 .featured-description {
-                    font-size: 12px;
+                    font-size: 13px;
                     line-height: 1.5;
                 }
 
@@ -2134,9 +2180,8 @@
 
                 }
 
-                .story-prev,
-                .story-next {
-                    display: none;
+                .story-arrow {
+                    top: 50%
                 }
 
                 .story-list {
@@ -2305,37 +2350,6 @@
                     bottom: 350px;
                 }
 
-                .featured-overlay {
-                    left: 35px;
-                    top: 20px;
-                    width: 220px;
-                    padding: 20px;
-                }
-
-                .featured-overlay h3 {
-                    font-size: 18px;
-                }
-
-                .featured-overlay p {
-                    font-size: 14px;
-                    line-height: 1.5;
-                }
-
-
-                .story-arrow {
-                    top: 50%;
-                    transform: translateY(-70%);
-                }
-
-                .story-prev {
-                    left: -35px;
-
-                }
-
-                .story-next {
-                    right: -35px;
-                }
-
             }
 
 
@@ -2482,38 +2496,10 @@
                     height: 480px;
                 }
 
-
-
-                /*  .empowering-card:nth-child(2) {
-                    grid-column: 1 / -1;
-                }*/
-
-                /*  .empowering-cards {
-                    grid-template-columns: 1.2fr 1fr 1fr;
-                    grid-template-rows: 300px 300px;
-                    gap: 20px;
+                .empowering-card:nth-child(2) .card-image img {
+                    object-position: right;
                 }
 
-                .empowering-card:nth-child(1) {
-                    grid-column: 1;
-                    grid-row: 1 / span 2;
-                }
-
-                .empowering-card:nth-child(2) {
-                    grid-column: 2 / span 2;
-                    grid-row: 1;
-                }
-
-                .empowering-card:nth-child(3) {
-                    grid-column: 2;
-                    grid-row: 2;
-                }
-
-                .empowering-card:nth-child(4) {
-                    grid-column: 3;
-                    grid-row: 2;
-                }
-*/
                 .card-image img {
                     width: 100%;
                     height: 100%;
@@ -2530,14 +2516,27 @@
                 }
 
                 .featured-image {
-                    height: 500px;
+                    height: 520px;
                 }
 
                 .featured-overlay {
-                    left: 65px;
-                    top: 40px;
-                    max-width: 300px;
-                    padding: 30px 30px;
+                    left: 55px;
+                    top: 30%;
+                    transform: translateY(-50%);
+                    width: 35%;
+                    min-height: auto;
+                    padding: 24px;
+                    /*max-width: 300px;
+                    padding: 30px 30px;*/
+                }
+
+                .featured-tag {
+                    font-size: 14px;
+                }
+
+                .featured-description {
+                    font-size: 16px;
+                    line-height: 1.6;
                 }
 
                 .story-arrow {
@@ -2545,11 +2544,11 @@
                 }
 
                 .story-prev {
-                    left: -55px;
+                    left: -20px;
                 }
 
                 .story-next {
-                    right: -55px;
+                    right: -20px;
                 }
 
                 .story-item {
